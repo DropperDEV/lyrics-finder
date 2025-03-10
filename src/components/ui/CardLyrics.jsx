@@ -5,10 +5,10 @@ export function CardLyrics() {
 
   return (
 <div className="scroll-auto w-full max-h-96 overflow-auto border border-[#e53170] p-4 bg-scroll 
-               scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#e53170]">      {error ? (
+               scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#e53170] scrollbar" >      {error ? (
         <p className="text-[#f25f4c]">{error}</p>
       ) : (
-        <pre className="whitespace-pre-wrap break-words text-[#a7a9be] text-center">
+        <pre className="whitespace-pre-wrap break-words text-[#a7a9be] text-center ">
           {lyrics ? (
             <div className="">
               <p className="font-bold text-xl text-[#ff8906]">

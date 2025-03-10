@@ -8,3 +8,23 @@
   align-items: center;   
   height: 100vh;
 }
+
+/* For Firefox Browser */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #191727;
+}
+
+
+/* For Chrome, EDGE, Opera, Others */
+.scrollbar::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track { 
+  background: #191727;
+}
+
+.scrollbar::-webkit-scrollbar-thumb { 
+  background:#000;
+}
