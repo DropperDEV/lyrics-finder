@@ -7,11 +7,12 @@ export function useLyrics() {
   const [lyrics, setLyrics] = useState("");
   const [error, setError] = useState("");
 
-  function searchLyrics() {
-    if (artist === "" || song === "") {
+  function searchLyrics(artistInput, songInput) {
+    if (artistInput === "" || songInput === "") {
       return;
     }
-    Axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`)
+
+    Axios.get(`https://api.lyrics.ovh/v1/${artistInput}/${songInput}`)
       .then((res) => {
         setLyrics(res.data.lyrics);
         setError("");
@@ -20,13 +21,14 @@ export function useLyrics() {
         setError("Song or artist not found. Please try again.");
         setLyrics("");
       });
+
+    setArtist(artistInput);
+    setSong(songInput);
   }
 
   return {
     artist,
-    setArtist,
     song,
-    setSong,
     lyrics,
     error,
     searchLyrics,
